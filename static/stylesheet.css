@@ -1,0 +1,51 @@
+body {
+	font-family: 'Indie Flower', cursive;
+	background-color: #FFFFFF;
+}
+
+h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 37px;
+	text-align: center;
+	background-color: #DCDCDC;
+}
+
+h2 {
+	text-align: center;
+}
+
+.pane {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    border: 2px solid;
+    border-radius: 25px;
+    /*padding: 5px;*/
+    margin: 5px;
+    border-color: #FFFFFF;
+    background-color: #DCDCDC;
+    text-align: center;
+}
+
+.restaurant,
+.noMenu,
+.newMenu,
+.Appetizers,
+.Entrees,
+.Desserts,
+.Beverages {
+	border: 10px solid;
+	border-radius: 15px;
+	border-color: #DCDCDC;
+	background-color: #FFFFFF;
+}
+
+.form {
+	text-align: center;
+	border: 10px solid;
+	border-color: #DCDCDC;
+}
+
+.button {
+	text-align: center;
+}

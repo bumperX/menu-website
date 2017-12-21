@@ -1,0 +1,36 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css 
+	href="{{url_for('static', filename='stylesheet.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+
+<body>
+	<div class='pane'>
+		<div class='header'>
+			<h1>Restaurants</h1>
+		</div>
+
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul>
+			{% for message in messages %}
+				<li><strong>{{message}}</strong></li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+
+		{% for item in restaurants %}
+		<div class="restaurant">
+			<span class="name"><h2>{{item.name}}</h2></span>
+			<span class="editlink"><a href="{{url_for('editRestaurant', restaurant_id=item.id)}}">Edit Restaurant</a><br></span>
+			<span class="deletelink"><a href="{{url_for('deleteRestaurant', restaurant_id=item.id)}}">Delete Restaurant</a></span>
+		</div>
+		<br>
+		{% endfor %} 
+	</div>
+
+</body>
+</html>
